@@ -8,6 +8,25 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float-slow {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .float-slow {
+            animation: float-slow 4s ease-in-out infinite;
+        }
+    </style>
 </head>
 
 <body class="bg-gradient-to-b from-neutral-900 via-neutral-950 to-black text-gray-100 antialiased">
@@ -60,7 +79,7 @@
                 Trusted by over 500 happy clients
             </div>
         </div>
-        <div class="relative bg-gradient-to-tr from-neutral-800 to-neutral-900 rounded-2xl p-6 shadow-2xl">
+        <div class="relative bg-gradient-to-tr from-neutral-800 to-neutral-900 rounded-2xl p-6 shadow-2xl float-slow">
             <div class="flex items-center gap-4">
                 <div class="w-20 h-20 rounded-xl bg-cover bg-center"
                     style="background-image: url('https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=500&q=60')">
