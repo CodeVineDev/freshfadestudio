@@ -8,6 +8,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <style>
         @keyframes float-slow {
             0% {
@@ -264,23 +266,120 @@
     </section>
 
     <!-- BOOKING -->
-    <section id="booking" class="max-w-6xl mx-auto px-6 py-12">
+    <section id="booking" class="max-w-6xl mx-auto px-6 py-12" data-aos="fade-up">
         <h3 class="text-2xl font-bold">Book With Us</h3>
-        <form class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input type="text" placeholder="Full name"
-                class="rounded-lg p-3 bg-neutral-800 border border-neutral-800" />
-            <input type="text" placeholder="Phone number"
-                class="rounded-lg p-3 bg-neutral-800 border border-neutral-800" />
-            <input type="text" placeholder="Preferred date and time"
-                class="sm:col-span-2 rounded-lg p-3 bg-neutral-800 border border-neutral-800" />
-            <textarea placeholder="Short message or style reference"
-                class="sm:col-span-2 rounded-lg p-3 bg-neutral-800 border border-neutral-800 h-24"></textarea>
-            <button type="submit"
-                class="sm:col-span-2 rounded-full bg-yellow-400 px-6 py-3 text-black font-semibold">Send
-                request</button>
-        </form>
-    </section>
 
+        <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Booking form -->
+            <form id="bookingForm" class="bg-neutral-900 rounded-2xl p-6 border border-neutral-800 shadow-lg"
+                onsubmit="handleBooking(event)">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <input id="name" name="name" type="text" placeholder="Full name" required
+                        class="rounded-lg p-3 bg-neutral-800 border border-neutral-800" />
+                    <input id="phone" name="phone" type="tel" placeholder="Phone number" required
+                        class="rounded-lg p-3 bg-neutral-800 border border-neutral-800" />
+                </div>
+
+                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <label class="sm:col-span-2">
+                        <div class="text-sm text-gray-300 mb-2">Choose service</div>
+                        <select id="service" class="w-full rounded-lg p-3 bg-neutral-800 border border-neutral-800">
+                            <option value="precision" data-duration="45">Precision Haircut — 45 min</option>
+                            <option value="beard" data-duration="20">Signature Beard Sculpt — 20 min</option>
+                            <option value="shave" data-duration="30">Classic Shave — 30 min</option>
+                            <option value="style" data-duration="60">Style & Finish — 60 min</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        <div class="text-sm text-gray-300 mb-2">Choose barber</div>
+                        <select id="staff" class="w-full rounded-lg p-3 bg-neutral-800 border border-neutral-800">
+                            <option value="olalekan">Olalekan</option>
+                            <option value="freddie">Freddie</option>
+                            <option value="james">James</option>
+                        </select>
+                    </label>
+
+                    <label class="sm:col-span-2">
+                        <div class="text-sm text-gray-300 mt-3 mb-2">Pick a date</div>
+                        <input id="date" placeholder="Select date"
+                            class="w-full rounded-lg p-3 bg-neutral-800 border border-neutral-800" />
+                    </label>
+
+                    <div id="timesContainer" class="sm:col-span-2">
+                        <div class="text-sm text-gray-300 mb-2">Available times</div>
+                        <div id="times" class="grid grid-cols-3 gap-2"></div>
+                    </div>
+
+                    <label class="sm:col-span-2">
+                        <div class="text-sm text-gray-300 mt-3 mb-2">Reference (optional)</div>
+                        <textarea id="notes" placeholder="Short message or style reference"
+                            class="w-full rounded-lg p-3 bg-neutral-800 border border-neutral-800 h-28"></textarea>
+                    </label>
+
+                    <div class="sm:col-span-2 flex items-center gap-3 mt-2">
+                        <button id="submitBtn" type="submit"
+                            class="rounded-full bg-yellow-400 px-6 py-3 text-black font-semibold">Confirm
+                            booking</button>
+                        <button type="button" onclick="resetBooking()"
+                            class="text-sm text-gray-400 underline">Reset</button>
+                        <div id="feedback" class="ml-auto text-xs text-gray-500">You will receive email confirmation
+                            instantly.</div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Summary / Trust card -->
+            <aside
+                class="bg-neutral-900 rounded-2xl p-6 border border-neutral-800 shadow-lg flex flex-col justify-between">
+                <div>
+                    <div class="text-sm text-gray-400">Booking summary</div>
+                    <div class="mt-4 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="text-gray-300">Selected service</div>
+                            <div id="summaryService" class="font-semibold">Precision Haircut</div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-gray-300">Barber</div>
+                            <div id="summaryStaff" class="font-semibold">Olalekan</div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-gray-300">Time</div>
+                            <div id="summaryTime" class="font-semibold">—</div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-gray-300">Duration</div>
+                            <div id="summaryDuration" class="font-semibold">45 min</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <div class="flex items-center gap-2 text-yellow-400">
+                        <span class="text-xl">★★★★★</span>
+                        <div class="text-sm text-gray-300">Trusted by 1,200+ clients</div>
+                    </div>
+                    <div class="mt-4 text-xs text-gray-400">Simulated system. No real bookings will be created. This
+                        demo shows exact slot blocking, staff assignment, and confirmation flows so you can see how a
+                        premium system behaves.</div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Confirmation modal (fake) -->
+        <div id="confirmModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4">
+            <div class="bg-neutral-900 rounded-2xl p-6 border border-neutral-800 max-w-md w-full text-center">
+                <h4 class="text-lg font-bold">Booking confirmed</h4>
+                <p id="confirmText" class="mt-3 text-gray-300">We sent a confirmation to the client. This is a demo
+                    confirmation.</p>
+                <div class="mt-6">
+                    <button onclick="closeModal()"
+                        class="rounded-full bg-yellow-400 px-6 py-2 text-black font-semibold">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
     <!-- FOOTER -->
     <footer class="max-w-6xl mx-auto px-6 py-10 border-t border-neutral-800">
         <div class="grid md:grid-cols-3 gap-6">
@@ -309,6 +408,7 @@
         </div>
         <div class="mt-10 text-center text-xs text-gray-500">© 2025 Fresh Fades Studio, Crafted for confidence</div>
     </footer>
+
     <script>
         AOS.init({
             // duration: 800,
