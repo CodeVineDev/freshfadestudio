@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lumina Interiors Bespoke Luxury Interior Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Premium font pairing: Cormorant Garamond (serif) + Inter (sans) -->
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700&f[]=work-sans@400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --charcoal: #0C0C0C;
+            --ivory: #FAFAF5;
+            --gold: #D4AF37;
+            --taupe: #D1C7B7;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+
+            font-family: 'Work Sans', sans-serif;
+            background: var(--ivory);
+            color: var(--charcoal);
+        }
+
+        .serif {
+            font-family: 'Cabinet Grotesk', sans-serif;
+        }
+
+        /* Luxury small-caps look for overlines */
+        .overline {
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-size: 0.85rem
+        }
+
+        /* subtle glass card */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(6px);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- NAV -->
+    <header class="fixed w-full z-50 top-5">
+        <div
+            class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between bg-white/60 backdrop-blur-lg rounded-b-2xl shadow-md">
+            <a href="#" class="flex items-center gap-3">
+                <div
+                    class="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--gold)] to-yellow-300 flex items-center justify-center text-white serif font-bold">
+                    L</div>
+                <span class="serif text-xl font-semibold text-[var(--charcoal)]">Lumina Interiors</span>
+            </a>
+            <nav class="hidden lg:flex gap-8 items-center text-sm font-medium text-gray-700">
+                <a href="#services" class="hover:text-black">Services</a>
+                <a href="#process" class="hover:text-black">Process</a>
+                <a href="#portfolio" class="hover:text-black">Portfolio</a>
+                <a href="#testimonials" class="hover:text-black">Testimonials</a>
+                <a href="#contact" class="hover:text-black">Contact</a>
+            </nav>
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="#contact"
+                    class="px-5 py-2 rounded-full bg-[var(--gold)] text-[var(--charcoal)] font-semibold shadow-md hover:brightness-95 transition">Book
+                    Consultation</a>
+            </div>
+            <button id="mobileToggle" class="lg:hidden p-2">☰</button>
+        </div>
+    </header>
+
+    <!-- HERO: Split, premium, high-converting -->
+    <section class="relative ">
+        <div class="max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left: Primary message + CTA -->
+            <div class="relative z-10">
+                <p class="text-gray-600">Bespoke Interiors • Limited Commissions</p>
+                <h1 class="serif text-5xl lg:text-6xl font-bold mt-6 leading-tight text-[var(--charcoal)]">Design That
+                    Curates Your Life <span class="text-[var(--gold)]">Not Just Your Space</span></h1>
+                <!-- <p class="mt-6 text-lg text-gray-700 max-w-xl">We craft refined, private interiors for clients who expect excellence. Limited projects each year meticulous process, unmatched finish.</p> -->
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#contact"
+                        class="inline-flex items-center gap-3 px-6 py-3 bg-[var(--gold)] text-[var(--charcoal)] font-semibold rounded-full shadow-lg transform hover:scale-[1.02] transition">Book
+                        Consultation<span class="text-sm text-gray-700">→</span></a>
+                    <a href="#portfolio"
+                        class="inline-flex items-center gap-3 px-6 py-3 border border-gray-200 text-gray-900 font-medium rounded-full glass hover:backdrop-blur-sm transition">Explore
+                        Projects</a>
+                </div>
+            </div>
+
+            <!-- Right: framed image (decorative) -->
+            <div class="relative">
+                <!-- Gradient border wrapper -->
+                <div class="rounded-3xl p-[8px] bg-gradient-to-br from-[rgba(212,175,55,1)] to-[rgba(255,244,199,0.4)]">
+                    <!-- Inner content -->
+                    <div class="relative rounded-2xl overflow-hidden">
+                        <video src="Media/video/vecteezy_large-bedroom-with-wooden-design_2016901.mov"
+                            alt="Luxurious living room" loop autoplay muted playsinline loading="lazy"
+                            class="w-full h-[520px] object-cover lg:object-center transform transition will-change-transform"></video>
+
+                        <!-- Overlay card -->
+                        <div class="absolute bottom-6 left-6 right-6 p-5 bg-white/85 rounded-xl shadow-2xl">
+                            <div class="flex items-start gap-4">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&q=80&auto=format&fit=crop&w=200"
+                                    alt="client"
+                                    class="w-14 h-14 rounded-full object-cover border-2 border-white shadow-sm" />
+                                <div>
+                                    <p class="serif text-lg font-semibold text-[var(--charcoal)]">Seafront family home
+                                    </p>
+                                    <p class="mt-1 text-sm text-gray-600">
+                                        Full renovation with bespoke joinery and lighting completed 2024.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="relative py-24 bg-[var(--ivory)]">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+            <!-- Image side with overlay card -->
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&q=80&auto=format&fit=crop&w=1200"
+                    alt="Lumina Studio" class="rounded-2xl shadow-2xl">
+                <div
+                    class="absolute -bottom-8 -left-8 bg-white/90 backdrop-blur-sm border border-[var(--gold)] rounded-xl p-6 max-w-xs shadow-lg">
+                    <p class="serif text-xl font-semibold text-gray-800">“Designing homes that feel like art.”</p>
+                    <span class="mt-2 block text-sm text-gray-500" Founder, Lumina</span>
+                </div>
+            </div>
+
+            <!-- Text side -->
+            <div>
+                <h2 class="serif text-4xl font-bold text-gray-900">Crafting Timeless Interiors</h2>
+                <p class="mt-6 text-lg text-gray-700 leading-relaxed">
+                    Lumina Interiors is a boutique studio dedicated to transforming residences and hospitality spaces
+                    into timeless sanctuaries.
+                    We take on a limited number of projects each year, ensuring intimacy, focus, and exceptional
+                    attention to detail.
+                </p>
+                <div class="mt-6 grid grid-cols-2 gap-4 text-sm">
+                    <div class="bg-white shadow-md rounded-lg p-4 border-l-4 border-[var(--gold)]">
+                        <p class="font-semibold text-gray-800">Founder-led</p>
+                        <p class="text-gray-600">Every project is guided personally by our creative director.</p>
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg p-4 border-l-4 border-[var(--gold)]">
+                        <p class="font-semibold text-gray-800">Full Service</p>
+                        <p class="text-gray-600">From concept to completion with turnkey execution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST / CREDENTIALS -->
+    <section class="py-20 bg-white border-t border-b">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div>
+                <h3 class="serif text-4xl font-bold text-[var(--gold)]">15+</h3>
+                <p class="mt-2 text-gray-600">Years of Excellence</p>
+            </div>
+            <div>
+                <h3 class="serif text-4xl font-bold text-[var(--gold)]">500+</h3>
+                <p class="mt-2 text-gray-600">Projects Curated</p>
+            </div>
+            <div>
+                <h3 class="serif text-4xl font-bold text-[var(--gold)]">50+</h3>
+                <p class="mt-2 text-gray-600">Awards & Publications</p>
+            </div>
+            <div>
+                <h3 class="serif text-4xl font-bold text-[var(--gold)]">Global</h3>
+                <p class="mt-2 text-gray-600">International Clients</p>
+            </div>
+        </div>
+    </section>
+    <!-- SERVICES (Outcome-driven, conversion-focused) -->
+    <section id="services" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center">
+                <p class="overline text-gray-500">Services</p>
+                <h2 class="serif text-3xl md:text-4xl font-bold mt-4">Design services built around results</h2>
+                <p class="mt-3 text-gray-600 max-w-2xl mx-auto">Each offering is tailored to achieve measurable
+                    outcomes: increased property value, elevated brand presence, or a home that calms the mind.</p>
+            </div>
+
+            <div class="mt-10 grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <article class="p-6 rounded-2xl shadow-lg bg-white">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-14 h-14 flex items-center justify-center rounded-lg bg-[var(--taupe)] text-[var(--charcoal)]">
+                            <!-- icon -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 7h18M3 12h18M3 17h18" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold serif">Residential Interior Design</h3>
+                    </div>
+                    <p class="mt-4 text-gray-600">Full-service transformation from concept to handover space planning,
+                        bespoke furniture, procurement, and project management.</p>
+                    <ul class="mt-4 text-sm text-gray-600 space-y-2">
+                        <li>• Value-first design (increase resale & rental potential)</li>
+                        <li>• Confidential process for high-net-worth clients</li>
+                        <li>• 3D visuals & material samples</li>
+                    </ul>
+                    <a href="#contact" class="mt-6 inline-block text-[var(--gold)] font-semibold">Request a tailored
+                        proposal →</a>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="p-6 rounded-2xl shadow-lg bg-white">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-14 h-14 flex items-center justify-center rounded-lg bg-[var(--taupe)] text-[var(--charcoal)]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M8 7V3m8 4V3M3 11h18M5 21h14a2 2 0 002-2V11H3v8a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold serif">Commercial & Hospitality</h3>
+                    </div>
+                    <p class="mt-4 text-gray-600">Brand-first interior strategies that amplify guest experience and
+                        operational efficiency for hotels, restaurants, and offices.</p>
+                    <ul class="mt-4 text-sm text-gray-600 space-y-2">
+                        <li>• Experience-driven layouts</li>
+                        <li>• Procurement & vendor management</li>
+                        <li>• ADA & code compliance support</li>
+                    </ul>
+                    <a href="#contact" class="mt-6 inline-block text-[var(--gold)] font-semibold">Start a corporate
+                        brief →</a>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="p-6 rounded-2xl shadow-lg bg-white">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-14 h-14 flex items-center justify-center rounded-lg bg-[var(--taupe)] text-[var(--charcoal)]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 8c-1.1 0-2 .9-2 2v6" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold serif">Bespoke Furniture & Styling</h3>
+                    </div>
+                    <p class="mt-4 text-gray-600">Curated furnishings and finishes commission pieces produced by
+                        artisans to complete your interiors.</p>
+                    <ul class="mt-4 text-sm text-gray-600 space-y-2">
+                        <li>• Material & finish curation</li>
+                        <li>• Local & international artisan partnerships</li>
+                        <li>• Lifetime care guidance</li>
+                    </ul>
+                    <a href="#contact" class="mt-6 inline-block text-[var(--gold)] font-semibold">Commission a
+                        collection →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process (builds trust + sets expectations) -->
+    <section id="process" class="py-16 bg-[var(--ivory)]">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="overline text-gray-500">Our Process</p>
+            <h2 class="serif text-3xl font-bold mt-4">A refined 6-step process that removes uncertainty</h2>
+            <div class="mt-10 grid md:grid-cols-3 gap-6 text-left">
+                <div class="p-6 bg-white rounded-2xl shadow">
+                    <h4 class="font-semibold serif">01 • Discovery</h4>
+                    <p class="mt-2 text-sm text-gray-600">Private consultation, scope & site review. We define outcomes,
+                        budget range & timeline.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow">
+                    <h4 class="font-semibold serif">02 • Concept</h4>
+                    <p class="mt-2 text-sm text-gray-600">Mood boards, layouts & 3D visuals so you know exactly what to
+                        expect before build commences.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow">
+                    <h4 class="font-semibold serif">03 • Execution</h4>
+                    <p class="mt-2 text-sm text-gray-600">Procurement, contractor coordination & on-site management with
+                        weekly updates.</p>
+                </div>
+            </div>
+            <div class="mt-6 grid md:grid-cols-3 gap-6 text-left">
+                <div class="p-6 bg-white rounded-2xl shadow">
+                    <h4 class="font-semibold serif">04 • Finishing</h4>
+                    <p class="mt-2 text-sm text-gray-600">Lighting, art placement & styling to reveal the final
+                        composition.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow">
+                    <h4 class="font-semibold serif">05 • Handover</h4>
+                    <p class="mt-2 text-sm text-gray-600">Final walkthrough, documentation & care guide for your home.
+                    </p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow">
+                    <h4 class="font-semibold serif">06 • Aftercare</h4>
+                    <p class="mt-2 text-sm text-gray-600">Optional maintenance & refresh services to keep the space
+                        immaculate through seasons.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO PREVIEW -->
+    <section id="portfolio" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="overline text-gray-500">Portfolio</p>
+                    <h3 class="serif text-2xl md:text-3xl font-bold mt-2">Selected Signature Projects</h3>
+                    <p class="mt-2 text-gray-600 max-w-xl">A curated selection of spaces that demonstrate range from
+                        intimate residences to landmark hospitality projects.</p>
+                </div>
+                <a href="#portfolio" class="text-[var(--gold)] font-semibold hidden md:inline">View full gallery →</a>
+            </div>
+
+            <div class="mt-8 grid md:grid-cols-3 gap-6">
+                <div class="rounded-2xl overflow-hidden shadow-lg">
+                    <img src="Media/images/interior 1.jpg" alt="project 1" class="w-full h-64 object-cover" />
+                    <div class="p-4 bg-white">
+                        <h4 class="font-semibold serif">Seafront Residence</h4>
+                        <p class="text-sm text-gray-600 mt-2">A calm, refined palette with artisan joinery and concealed
+                            storage.</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&q=80&auto=format&fit=crop&w=1000"
+                        alt="project 2" class="w-full h-64 object-cover" />
+                    <div class="p-4 bg-white">
+                        <h4 class="font-semibold serif">Boutique Hotel Lobby</h4>
+                        <p class="text-sm text-gray-600 mt-2">A sense of arrival through texture, lighting & sculptural
+                            seating.</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg">
+                    <img src="Media/images/inerior 2.jpg" alt="project 3" class="w-full h-64 object-cover" />
+                    <div class="p-4 bg-white">
+                        <h4 class="font-semibold serif">City Penthouse</h4>
+                        <p class="text-sm text-gray-600 mt-2">Bold views, layered lighting and custom millwork.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS: styled + carousel for trust -->
+    <section id="testimonials" class="py-20 bg-[var(--ivory)]">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="overline text-gray-500">Testimonials</p>
+            <h3 class="serif text-3xl font-bold mt-4 mb-10">What clients say after living with our design</h3>
+            <div class="grid grid-cols-1 text-left md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl  shadow-lg border border-gray-100">
+                    <blockquote class="text-lg text-gray-700 leading-relaxed">
+                        “Our home finally feels like a sanctuary. The team’s care from concept through handover was
+                        precise and warm.”
+                    </blockquote>
+                    <div class="mt-6 flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200"
+                            alt="client 1" class="w-12 h-12 rounded-full object-cover border" />
+                        <div>
+                            <p class="font-semibold text-gray-900">Sarah J.</p>
+                            <p class="text-sm text-gray-500">Residential Client · Lagos · Jan 2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <blockquote class="text-lg text-gray-700 leading-relaxed">
+                        “Their attention to finishes and lighting transformed our boutique hotel into a consistently
+                        sold-out destination.”
+                    </blockquote>
+                    <div class="mt-6 flex items-center gap-4">
+                       <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200"
+                            alt="client 1" class="w-12 h-12 rounded-full object-cover border" />
+                        <div>
+                            <p class="font-semibold text-gray-900">Michael B.</p>
+                            <p class="text-sm text-gray-500">Hospitality Owner · London · Dec 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <blockquote class="text-lg text-gray-700 leading-relaxed">
+                        “Professional, discrete and exceptionally creative. They listened and elevated every brief.”
+                    </blockquote>
+                    <div class="mt-6 flex items-center gap-4">
+                         <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200"
+                            alt="client 1" class="w-12 h-12 rounded-full object-cover border" />
+                        <div>
+                            <p class="font-semibold text-gray-900">Olivia M.</p>
+                            <p class="text-sm text-gray-500">Private Client · New York · Nov 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AVAILABILITY + SOCIAL (Premium Design) -->
+    <section id="availability" class="py-24 bg-[var(--ivory)] border-t border-b">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
+
+            <!-- Availability -->
+            <div>
+                <h3 class="serif text-4xl font-bold text-gray-900">Our Availability</h3>
+                <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+                    Book consultations during our official hours. <br />
+                    <span class= text-gray-700">Please note: we remain closed on Sundays.</span>
+                </p>
+
+                <div class="mt-8 grid gap-3">
+                    <!-- Each day as a card -->
+                    <div
+                        class="flex items-center justify-between bg-white p-4 rounded-xl shadow hover:shadow-md transition">
+                        <span class="flex items-center gap-2 font-medium text-gray-800">
+                            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Monday
+                        </span>
+                        <span class="text-gray-600">9:00 AM 6:00 PM</span>
+                    </div>
+
+                    <div
+                        class="flex items-center justify-between bg-white p-4 rounded-xl shadow hover:shadow-md transition">
+                        <span class="flex items-center gap-2 font-medium text-gray-800">
+                            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Tuesday
+                        </span>
+                        <span class="text-gray-600">9:00 AM 6:00 PM</span>
+                    </div>
+
+                    <div
+                        class="flex items-center justify-between bg-white p-4 rounded-xl shadow hover:shadow-md transition">
+                        <span class="flex items-center gap-2 font-medium text-gray-800">
+                            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Wednesday
+                        </span>
+                        <span class="text-gray-600">9:00 AM 6:00 PM</span>
+                    </div>
+
+                    <div
+                        class="flex items-center justify-between bg-white p-4 rounded-xl shadow hover:shadow-md transition">
+                        <span class="flex items-center gap-2 font-medium text-gray-800">
+                            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Thursday
+                        </span>
+                        <span class="text-gray-600">9:00 AM 6:00 PM</span>
+                    </div>
+
+                    <div
+                        class="flex items-center justify-between bg-white p-4 rounded-xl shadow hover:shadow-md transition">
+                        <span class="flex items-center gap-2 font-medium text-gray-800">
+                            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Friday
+                        </span>
+                        <span class="text-gray-600">9:00 AM 6:00 PM</span>
+                    </div>
+
+                    <div
+                        class="flex items-center justify-between bg-white p-4 rounded-xl shadow hover:shadow-md transition">
+                        <span class="flex items-center gap-2 font-medium text-gray-800">
+                            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Saturday
+                        </span>
+                        <span class="text-gray-600">10:00 AM 4:00 PM</span>
+                    </div>
+
+                    <div
+                        class="flex items-center justify-between bg-red-50 p-4 rounded-xl border border-red-200 shadow-sm">
+                        <span class="flex items-center gap-2 font-medium text-red-600">
+                            <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Sunday
+                        </span>
+                        <span class="font-semibold text-red-600">Closed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social grid -->
+            <div>
+                <h3 class="serif text-4xl font-bold text-gray-900">Follow & Connect</h3>
+                <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+                    Stay connected with us across our social platforms for inspiration, updates, and direct enquiries.
+                </p>
+
+                <div class="mt-8 grid grid-cols-2 gap-5">
+                    <a href="#"
+                        class="flex items-center gap-4 bg-white p-5 rounded-xl shadow hover:shadow-lg transition group">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="instagram"
+                            class="w-7 h-7 group-hover:scale-110 transition" />
+                        <span class="text-sm font-medium text-gray-700">@lumina.interiors</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center gap-4 bg-white p-5 rounded-xl shadow hover:shadow-lg transition group">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111576.png" alt="facebook"
+                            class="w-7 h-7 group-hover:scale-110 transition" />
+                        <span class="text-sm font-medium text-gray-700">/LuminaInteriors</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center gap-4 bg-white p-5 rounded-xl shadow hover:shadow-lg transition group">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="linkedin"
+                            class="w-7 h-7 group-hover:scale-110 transition" />
+                        <span class="text-sm font-medium text-gray-700">/company/lumina</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center gap-4 bg-white p-5 rounded-xl shadow hover:shadow-lg transition group">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="pinterest"
+                            class="w-7 h-7 group-hover:scale-110 transition" />
+                        <span class="text-sm font-medium text-gray-700">/lumina-ideas</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT (Short frictionless form + promise) -->
+    <section id="contact" class="py-20">
+        <div class="max-w-4xl mx-auto px-6 bg-white rounded-3xl shadow-xl p-10">
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <p class="overline text-gray-500">Get In Touch</p>
+                    <h3 class="serif text-2xl font-bold mt-2">Tell us about your project</h3>
+                    <p class="mt-3 text-gray-600">Concise forms lead to more conversions. Tell us the essentials and
+                        we’ll take care of the rest. We respect privacy NDAs available.</p>
+
+                    <div class="mt-6 text-sm text-gray-600">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-[var(--gold)]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <div>hello@lumina-interiors.com</div>
+                        </div>
+                        <div class="flex items-center gap-3 mt-3">
+                            <svg class="w-5 h-5 text-[var(--gold)]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5h12M9 3v2m6 16l4-4m0 0V9a2 2 0 00-2-2h-4" />
+                            </svg>
+                            <div>We respond within 24 hours · NDA available</div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="md:w-1/2 grid gap-4"
+                    onsubmit="event.preventDefault(); alert('Thanks we received your enquiry. We will reply within 24 hours.');">
+                    <input required name="name" placeholder="Full name" class="p-4 rounded-xl border border-gray-200" />
+                    <input required name="email" type="email" placeholder="Email address"
+                        class="p-4 rounded-xl border border-gray-200" />
+                    <input name="budget" placeholder="Budget range (optional)"
+                        class="p-4 rounded-xl border border-gray-200" />
+                    <textarea name="message" rows="4" placeholder="Brief project summary"
+                        class="p-4 rounded-xl border border-gray-200"></textarea>
+                    <div class="flex items-center gap-3">
+                        <input type="checkbox" id="consent" required />
+                        <label for="consent" class="text-sm text-gray-600">I agree to be contacted. Lumina respects
+                            privacy.</label>
+                    </div>
+                    <button type="submit"
+                        class="mt-2 px-6 py-3 rounded-full bg-[var(--gold)] text-[var(--charcoal)] font-semibold">Send
+                        Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[var(--charcoal)] text-[var(--ivory)] py-12">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-6 items-start">
+            <div>
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-full bg-[var(--gold)] flex items-center justify-center serif font-bold text-[var(--charcoal)]">
+                        L</div>
+                    <div>
+                        <div class="serif font-semibold">Lumina Interiors</div>
+                        <div class="text-sm text-gray-200">Bespoke interior design & consultancy</div>
+                    </div>
+                </div>
+                <div class="mt-6 text-sm text-gray-300">
+                    &copy; 2025 Lumina Interiors. All rights reserved.
+                </div>
+            </div>
+
+            <div class="text-sm">
+                <div class="font-semibold">Services</div>
+                <ul class="mt-3 space-y-2 text-gray-300">
+                    <li>Residential Design</li>
+                    <li>Commercial & Hospitality</li>
+                    <li>Bespoke Furniture</li>
+                </ul>
+            </div>
+
+            <div class="text-sm">
+                <div class="font-semibold">Connect</div>
+                <ul class="mt-3 space-y-2 text-gray-300">
+                    <li>Instagram</li>
+                    <li>Pinterest</li>
+                    <li>LinkedIn</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Minimal JS: hero parallax + testimonial carousel + mobile toggle -->
+    <script>
+        // Parallax subtle movement
+        const heroImg = document.getElementById('heroImg');
+        window.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 6; // range -3 to 3
+            const y = (e.clientY / window.innerHeight - 0.5) * 6;
+            if (heroImg) heroImg.style.transform = `translate(${x}px, ${y}px) scale(1.02)`;
+        });
+
+        // Testimonials carousel
+        const track = document.getElementById('testimonialTrack');
+        const slides = track.children; let index = 0;
+        function go(i) {
+            index = (i + slides.length) % slides.length;
+            track.style.transform = `translateX(-${index * 100}%)`;
+            track.style.transition = 'transform 500ms cubic-bezier(.2,.9,.3,1)';
+        }
+        document.getElementById('next').addEventListener('click', () => go(index + 1));
+        document.getElementById('prev').addEventListener('click', () => go(index - 1));
+        // auto rotate
+        setInterval(() => go(index + 1), 7000);
+
+        // Mobile toggle (simple)
+        const mobileToggle = document.getElementById('mobileToggle');
+        mobileToggle.addEventListener('click', () => alert('Mobile menu implement as needed.'));
+    </script>
+</body>
+
+</html>
